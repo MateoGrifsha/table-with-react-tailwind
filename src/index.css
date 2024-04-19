@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html{
+  height: 100vh;
+  background: #1a222c;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.tableHeadCell:first-child{
+  border-top-left-radius: 6px;
+  grid-column: 1/2;
+}
+.tableHeadCell:nth-child(2){
+  grid-column: 2/4;
+}
+.tableHeadCell:nth-child(3){
+  grid-column: 4/8;
+}
+.tableHeadCell:last-child{
+  grid-column: 8/13;
+  border-top-right-radius: 6px;
+
+}
+
+#modal-wrapper{
+  animation: forwards 0.2s fadeIn;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 100%;
+  }
+}
+
+.tip{
+  left: 0;
+}
+#modalBackground{
+  position: fixed;
+  top: 0;
+  background-color: black;
+  opacity: 70%;
+}
+#modal{
+  position: fixed;
+}
+textarea{
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-container input{
+  background-image: url(../src/assets/searchIcon.svg);
+  background-repeat: no-repeat;
+  background-position: 2%;
+  background-size: 17px;
+}
